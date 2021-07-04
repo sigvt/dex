@@ -1,0 +1,56 @@
+{
+  "name": "@holodata/dex",
+  "description": "Node.js library & CLI for holodex.net",
+  "version": "0.0.0",
+  "author": "Yasuaki Uechi <y@uechi.io> (https://uechi.io/)",
+  "scripts": {
+    "build": "yarn tsup:cjs --minify --dts",
+    "clean": "shx rm -rf lib",
+    "dev": "yarn tsup:cjs --watch",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "jest",
+    "tsup:cjs": "tsup src/{index,cli}.ts -d lib"
+  },
+  "types": "lib/index.d.ts",
+  "main": "lib/index.js",
+  "bin": {
+    "holodex": "lib/cli.js"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "epicfail": "^2.0.0",
+    "filtrex": "^2.2.3",
+    "muffled": "^0.4.0",
+    "yargs": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^16.0.0",
+    "jest": "^27.0.6",
+    "npm-run-all": "^4.1.5",
+    "shx": "^0.3.3",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "tsup": "^4.12.0",
+    "typescript": "^4.3.5"
+  },
+  "homepage": "https://github.com/holodata/dex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/holodata/dex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/holodata/dex/issues"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "cli",
+    "holodex",
+    "hololive"
+  ],
+  "engines": {
+    "node": ">= 12.18.3"
+  }
+}
