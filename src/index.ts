@@ -14,6 +14,7 @@ export function holodex(token?: string) {
  * @see https://github.com/RiceCakess/Holodex/blob/8593a469593fbae45008270622e9b1bed785f47a/src/utils/consts.js#L25
  */
 export const ORGS = Object.freeze({
+  all: "All Vtubers",
   hololive: "Hololive",
   nijisanji: "Nijisanji",
   "kizuna-ai": "Kizuna Ai Inc.",

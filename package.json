@@ -50,6 +50,9 @@
     "holodex",
     "hololive"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">= 12.18.3"
   }
