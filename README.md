@@ -53,9 +53,9 @@ dex search Minecraft
 npm i -g @holodata/dex
 ```
 
-### macOS
+### Homebrew
 
 ```bash
-brew tap sake.sh/uetchy https://sake.sh/uetchy
+brew tap sake.sh/holodata https://sake.sh/holodata
 brew install dex
 ```

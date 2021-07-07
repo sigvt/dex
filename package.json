@@ -14,12 +14,13 @@
   "types": "lib/index.d.ts",
   "main": "lib/index.js",
   "bin": {
-    "holodex": "lib/cli.js"
+    "dex": "lib/cli.js"
   },
   "files": [
     "lib"
   ],
   "dependencies": {
+    "chalk": "^4.1.1",
     "epicfail": "^2.0.0",
     "filtrex": "^2.2.3",
     "muffled": "^0.4.0",
