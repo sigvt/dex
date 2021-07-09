@@ -1,7 +1,13 @@
 import { Muffled, headerAuth } from "muffled";
 
-export function holodex(token?: string) {
-  const client = new Muffled("holodex.net/api/v2");
+export function holodex(token?: string): any {
+  const client = new Muffled("holodex.net/api/v2", {
+    overrides: {
+      search: {
+        method: "POST",
+      },
+    },
+  });
   client.use(headerAuth("x-apikey", token));
   return client;
 }

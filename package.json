@@ -23,18 +23,18 @@
     "chalk": "^4.1.1",
     "epicfail": "^2.0.0",
     "filtrex": "^2.2.3",
-    "muffled": "^0.4.0",
+    "muffled": "^1.0.0",
     "yargs": "^17.0.1"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.23",
-    "@types/node": "^16.0.0",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.3.0",
     "jest": "^27.0.6",
     "npm-run-all": "^4.1.5",
     "shx": "^0.3.3",
     "ts-jest": "^27.0.3",
     "ts-node": "^10.0.0",
-    "tsup": "^4.12.0",
+    "tsup": "^4.12.5",
     "typescript": "^4.3.5"
   },
   "homepage": "https://github.com/holodata/dex",
