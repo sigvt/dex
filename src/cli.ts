@@ -12,7 +12,7 @@ async function live(argv: any) {
   const filters = argv.filter
     ? argv.filter.map((exp: string) => compileExpression(exp))
     : undefined;
-  const org = ORGS[argv.scope] || "All Vtubers";
+  const org = ORGS[argv.scope] || ORGS["all"];
 
   const client = holodex(process.env.API_KEY);
 
@@ -25,12 +25,12 @@ async function live(argv: any) {
   }
 
   if (jsonOutput) {
-    console.log(JSON.stringify(videos, null, 2));
-  } else {
-    for (const video of videos) {
-      console.log(video.title);
-      console.log(`https://www.youtube.com/watch?v=${video.id}`);
-    }
+    return console.log(JSON.stringify(videos, null, 2));
+  }
+
+  for (const video of videos) {
+    console.log(video.title);
+    console.log(`https://www.youtube.com/watch?v=${video.id}`);
   }
 }
 
@@ -43,15 +43,15 @@ async function channel(argv: any) {
   const channel = await client.channels[id]();
 
   if (jsonOutput) {
-    console.log(JSON.stringify(channel, null, 2));
-  } else {
-    console.log(channel.name, channel.english_name);
-    console.log(channel.description);
-    console.log(channel.org, channel.suborg);
-    console.log(channel.view_count, channel.video_count);
-    console.log(channel.twitter);
-    console.log(`https://www.youtube.com/watch?v=${channel.id}`);
+    return console.log(JSON.stringify(channel, null, 2));
   }
+
+  console.log(channel.name, channel.english_name);
+  console.log(channel.description);
+  console.log(channel.org, channel.suborg);
+  console.log(channel.view_count, channel.video_count);
+  console.log(channel.twitter);
+  console.log(`https://www.youtube.com/watch?v=${channel.id}`);
 }
 
 async function search(argv: any) {
@@ -67,11 +67,11 @@ async function search(argv: any) {
 
   if (jsonOutput) {
     console.log(JSON.stringify(result, null, 2));
-  } else {
-    for (const video of result) {
-      console.log(video.title);
-      console.log(`https://www.youtube.com/watch?v=${video.id}`);
-    }
+  }
+
+  for (const video of result) {
+    console.log(video.title);
+    console.log(`https://www.youtube.com/watch?v=${video.id}`);
   }
 }
 

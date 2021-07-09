@@ -1,6 +1,7 @@
 # ▶️ dex
 
 [![Actions Status: test](https://github.com/holodata/dex/workflows/test/badge.svg)](https://github.com/holodata/dex/actions?query=test)
+[![npm](https://badgen.net/npm/v/@holodata/dex)](https://npmjs.org/package/@holodata/dex)
 
 Node.js library & CLI for [Holodex](https://holodex.net).
 
