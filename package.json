@@ -23,7 +23,7 @@
     "chalk": "^4.1.1",
     "epicfail": "^2.0.0",
     "filtrex": "^2.2.3",
-    "muffled": "^1.0.0",
+    "muffled": "^1.0.1",
     "yargs": "^17.0.1"
   },
   "devDependencies": {

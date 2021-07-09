@@ -1,6 +1,6 @@
 import { Muffled, headerAuth } from "muffled";
 
-export function holodex(token?: string): any {
+export function holodex(token?: string) {
   const client = new Muffled("holodex.net/api/v2", {
     overrides: {
       search: {
