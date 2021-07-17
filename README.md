@@ -58,5 +58,5 @@ npm i -g @holodata/dex
 
 ```bash
 brew tap sake.sh/holodata https://sake.sh/holodata
-brew install dex
+brew install holodex
 ```
